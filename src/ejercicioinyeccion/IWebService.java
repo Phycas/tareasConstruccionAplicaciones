@@ -1,6 +1,6 @@
 package ejercicioinyeccion;
 
-public interface IWs {
+public interface IWebService {
 	public double getTax();
 
 }

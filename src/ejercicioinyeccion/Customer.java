@@ -5,7 +5,7 @@ public class Customer implements IMyData{
 	private String rut;
 	private String name;
 	private Double amount;
-	private IWs _ws;
+	private IWebService _ws;
 	
 	public String getRut() {
 		return rut;
@@ -24,7 +24,7 @@ public class Customer implements IMyData{
 	}
 
 		
-	public Customer(String r, String n, Double a, IWs in){
+	public Customer(String r, String n, Double a, IWebService in){
 		this.rut = r;
 		this.name = n;
 		this.amount = a;

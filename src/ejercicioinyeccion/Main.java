@@ -10,7 +10,7 @@ public class Main {
 		IMyData	producto, cliente, empleado; 
 		IMyData d;
 		List<IMyData> lista = new ArrayList<IMyData>();
-		IWs wsMock = new WebServiceMock();
+		IWebService wsMock = new WebServiceMock();
 		//llenando variables IMyData
 		producto = new Product("ASD1234", "Barra de Chocolate");
 		cliente = new Customer("19.344.657-6", "Sebastian el Magnánimo", 100.0, wsMock);
