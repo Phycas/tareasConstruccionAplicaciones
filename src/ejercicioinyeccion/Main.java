@@ -4,16 +4,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//IMyData = di; //this line does'nt work
+		IMyData	producto, cliente, empleado; 
 
-		Product producto = new Product("ASD1234", "Barra de Chocolate");
-		Customer cliente = new Customer("19.344.657-6", "Sebastian el Magnánimo");
-		Employee empleado = new Employee("17.324.148-9", "Manuel el Increible");
+		producto = new Product("ASD1234", "Barra de Chocolate");
+		cliente = new Customer("19.344.657-6", "Sebastian el Magnánimo");
+		empleado = new Employee("17.324.148-9", "Manuel el Increible");
 		
 		System.out.printf("Nombre Producto: " + producto.getName() + "\n");
 		System.out.printf("Nombre Cliente: " + cliente.getName() + "\n");
 		System.out.printf("Nombre Empleado: " + empleado.getName() + "\n");
 		
+		System.out.println("Usando método escribirNombre");
+		escribirNombre(cliente);
 		
 		Rut rutazo = new Rut();
 		try {
@@ -23,6 +25,11 @@ public class Main {
 			e.printStackTrace();
 		}
 		System.out.println(rutazo.getRut());
+		
+		
+	}
+	private static void escribirNombre(IMyData d) {
+		System.out.println(d.getName());
 	}
 
 }
