@@ -4,6 +4,8 @@ public class Customer implements IMyData{
 
 	private String rut;
 	private String name;
+	private Double amount;
+	private IWs _ws;
 	
 	public String getRut() {
 		return rut;
@@ -22,10 +24,18 @@ public class Customer implements IMyData{
 	}
 
 		
-	public Customer(String r, String n){
+	public Customer(String r, String n, Double a, IWs in){
 		this.rut = r;
 		this.name = n;
+		this.amount = a;
+		this._ws = in;
 	}
-	
+	 public Double getAmount() {
+		 return this.amount * _ws.getTax();
+	 }
+	 
+	 public String getAmountSTR() {
+		 return "Monto de " + this.name + " :" + getAmount().toString();
+	 }
 	
 }

@@ -10,9 +10,10 @@ public class Main {
 		IMyData	producto, cliente, empleado; 
 		IMyData d;
 		List<IMyData> lista = new ArrayList<IMyData>();
+		IWs wsMock = new WebServiceMock();
 		//llenando variables IMyData
 		producto = new Product("ASD1234", "Barra de Chocolate");
-		cliente = new Customer("19.344.657-6", "Sebastian el Magnánimo");
+		cliente = new Customer("19.344.657-6", "Sebastian el Magnánimo", 100.0, wsMock);
 		empleado = new Employee("17.324.148-9", "Manuel el Increible");
 		//llenando la lista
 		lista.add(producto);
